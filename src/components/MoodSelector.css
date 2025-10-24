@@ -1,0 +1,142 @@
+.mood-selector {
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.mood-selector.dark {
+  background: linear-gradient(135deg, #1a2332 0%, #1e2a3f 100%);
+  border: 1px solid rgba(168, 218, 220, 0.2);
+}
+
+.mood-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 0 0 4px 0;
+  text-align: center;
+}
+
+.mood-selector.dark .mood-title {
+  color: #a8dadc;
+}
+
+.mood-subtitle {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.mood-selector.dark .mood-subtitle {
+  color: #aaa;
+}
+
+.mood-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.mood-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+  min-width: 65px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mood-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.mood-button.active {
+  border-color: var(--mood-color);
+  background: linear-gradient(135deg, var(--mood-color) 0%, rgba(102, 126, 234, 0.1) 100%);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+  transform: scale(1.05);
+}
+
+.mood-selector.dark .mood-button {
+  background: #2a3a4f;
+  border-color: transparent;
+}
+
+.mood-selector.dark .mood-button:hover {
+  box-shadow: 0 4px 12px rgba(168, 218, 220, 0.2);
+}
+
+.mood-selector.dark .mood-button.active {
+  border-color: var(--mood-color);
+  background: rgba(42, 157, 143, 0.2);
+}
+
+.mood-emoji {
+  font-size: 1.6rem;
+}
+
+.mood-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.mood-selector.dark .mood-label {
+  color: #e0e0e0;
+}
+
+.mood-feedback {
+  padding: 10px 12px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mood-feedback p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mood-selector.dark .mood-feedback {
+  background: rgba(168, 218, 220, 0.1);
+  border-left-color: #a8dadc;
+}
+
+.mood-selector.dark .mood-feedback p {
+  color: #a8dadc;
+}
+
+.feedback-emoji {
+  font-size: 1.2rem;
+}

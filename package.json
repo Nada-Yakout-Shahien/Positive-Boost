@@ -1,0 +1,43 @@
+{
+  "name": "positive-boost",
+  "version": "1.0.0",
+  "description": "تطبيق يومي لتعزيز الإيجابية - Positive Boost Daily App",
+  "main": "src/main.js",
+  "homepage": "./",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0",
+    "react-flip-toolkit": "^7.1.0",
+    "framer-motion": "^10.16.12"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-is-dev": "^2.0.0",
+    "react-scripts": "5.0.1",
+    "concurrently": "^8.2.0",
+    "wait-on": "^7.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron": "electron .",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron\"",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
