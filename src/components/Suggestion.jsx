@@ -97,7 +97,7 @@ const Suggestion = ({ isDarkMode }) => {
             <h3 className="suggestion-name">{suggestion.title}</h3>
             <p className="suggestion-description">{suggestion.description}</p>
           </div>
-          <button className="try-btn">جرب الآن ✨</button>
+          <button className="try-btn">جرب الآن 🔥</button>
         </div>
       )}
     </section>
