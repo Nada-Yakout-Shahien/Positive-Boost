@@ -5,6 +5,7 @@ import MoodSelector from './components/MoodSelector';
 import Display from './components/Display';
 import Suggestion from './components/Suggestion';
 import History from './components/History';
+import SystemInfo from './components/SystemInfo';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -40,6 +41,9 @@ function App() {
 
             {/* مكون الاقتراح اليومي */}
             <Suggestion isDarkMode={isDarkMode} />
+
+            {/* مكون معلومات النظام */}
+            <SystemInfo isDarkMode={isDarkMode} />
 
             {/* مكون السجل (اختياري) */}
             <History isDarkMode={isDarkMode} />
